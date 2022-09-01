@@ -1,7 +1,7 @@
        program fibonacci
        implicit none
        integer i, nmax
-       integer jnew, jolf, aux
+       integer jnew, jold, aux
        
        nmax = 10
        
