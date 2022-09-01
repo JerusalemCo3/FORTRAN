@@ -1,0 +1,22 @@
+       program fibonacci
+       implicit none
+       integer i, nmax
+       integer jnew, jolf, aux
+       
+       nmax = 10
+       
+       jnew = 1; jold = 1
+       
+       print *
+       do i=1, nmax
+          print * , 'Elementos' , i , 'de la serie de Fibonacci: ', jnew
+          print *
+
+      aux = jnew
+      jnew= jnew + jold
+      jold= aux
+      
+      end do
+      pause
+      end program fibonacci
+      
