@@ -1,0 +1,44 @@
+        program tienda
+        implicit none
+
+        Integer cant, i, cac;
+        real pre, preciot, total;
+        character nom
+
+        print*
+        write(*,*) "Ingrese cantidad de productos a comprar: "
+        read(*,*)cant
+        
+        total = 0
+        i=0
+
+        do while (i < cant)
+
+         print*
+         write(*,*) "Ingrese nombre del producto: "
+         read(*,*)nom
+
+         print*
+         write(*,*) "Cantidad a comprar: "
+         read(*,*)cac
+
+         print*
+         write(*,*) "Precio del producto: "
+         read(*,*)pre
+
+         preciot = pre * cac
+
+         if (preciot > 1000) then
+          preciot = preciot - (preciot*0.15)
+         end if
+
+         total = total + preciot
+
+         i = i + 1
+        end do
+
+        print*
+        write(*,*) "Precio total a pagar es de: ", total
+
+        pause
+        end program tienda
