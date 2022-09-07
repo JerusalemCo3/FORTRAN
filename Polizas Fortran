@@ -61,7 +61,7 @@
         print *
         write(*,*) 'Costo total: ', costom
         
-        stop
+        pause
 
      end program Polizas
 
