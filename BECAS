@@ -1,0 +1,35 @@
+Algoritmo BECAS
+	Escribir 'Ingresa tu edad'
+	Leer edad
+	Escribir 'Ingresa el promedio general: '
+	Leer prom
+	Si (edad>=18) Entonces
+		Si (prom>=9) Entonces
+			Escribir 'Beca de 2,000 pesos'
+		SiNo
+			Si (prom>=7.5 Y prom<9) Entonces
+				Escribir 'Beca de 1,000 pesos'
+			SiNo
+				Si (prom>=6 Y prom<7.5) Entonces
+					Escribir 'Beca de 500 pesos'
+				SiNo
+					Escribir 'NO HAY BECA PARA TI :C'
+				FinSi
+			FinSi
+		FinSi
+	SiNo
+		Si (prom>=9) Entonces
+			Escribir 'Beca de 3000 pesos'
+		SiNo
+			Si (prom>=8 Y prom<9) Entonces
+				Escribir 'Beca de 2000 pesos'
+			SiNo
+				Si (prom>=6 Y prom<8) Entonces
+					Escribir 'Su beca es de 100 pesos'
+				SiNo
+					Escribir 'NO HAY BECA PARA TI'
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
