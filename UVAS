@@ -1,0 +1,56 @@
+        program uvas
+
+        implicit none
+        integer tip, tam
+        real precio, pre1, pre2, pre3, pre4, preT, klg,pt
+
+
+        print*
+        write (*,*) "Tipo de uva: 1=A 0=B"
+        read(*,*)tip
+
+        print*
+        write(*,*) "Tamaño de la uva 1 o 2: "
+
+        read(*,*)tam
+
+        print*
+        write(*,*) "Precio de la uva: "
+        print*
+        read(*,*)precio
+
+        if (tip==1) then
+           if(tam==1) then
+             pre1 = precio+0.2
+           else
+             pre2 = precio+0.3
+           end if
+        end if
+
+        if (tip==0) then
+           if(tam==1) then
+             pre3 = precio-0.3
+           else
+             pre4 = precio-0.5
+           end if
+        end if
+
+        preT = pre1 + pre2 + pre3 + pre4
+
+        print*
+        write(*,*) "Costo total: ", preT
+        print*
+
+        print*
+        write(*,*) "kilos a comprar"
+        print*
+        read(*,*)klg
+
+        pt = preT*klg
+
+        print*
+        write(*,*)"Costo total:"  ,pt
+        print*
+
+        pause
+        end program uvas
