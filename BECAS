@@ -1,35 +1,53 @@
-Algoritmo BECAS
-	Escribir 'Ingresa tu edad'
-	Leer edad
-	Escribir 'Ingresa el promedio general: '
-	Leer prom
-	Si (edad>=18) Entonces
-		Si (prom>=9) Entonces
-			Escribir 'Beca de 2,000 pesos'
-		SiNo
-			Si (prom>=7.5 Y prom<9) Entonces
-				Escribir 'Beca de 1,000 pesos'
-			SiNo
-				Si (prom>=6 Y prom<7.5) Entonces
-					Escribir 'Beca de 500 pesos'
-				SiNo
-					Escribir 'NO HAY BECA PARA TI :C'
-				FinSi
-			FinSi
-		FinSi
-	SiNo
-		Si (prom>=9) Entonces
-			Escribir 'Beca de 3000 pesos'
-		SiNo
-			Si (prom>=8 Y prom<9) Entonces
-				Escribir 'Beca de 2000 pesos'
-			SiNo
-				Si (prom>=6 Y prom<8) Entonces
-					Escribir 'Su beca es de 100 pesos'
-				SiNo
-					Escribir 'NO HAY BECA PARA TI'
-				FinSi
-			FinSi
-		FinSi
-	FinSi
-FinAlgoritmo
+
+        program Becas
+        implicit none
+        integer edad
+        real prom
+
+        print*
+        write(*,*)"Ingresa edad: "
+        read(*,*)edad
+
+        print*
+        write(*,*)"Ingresa el promedio general:"
+        read(*,*)prom
+
+        if(edad>18) then
+           if(prom>=9) then
+             write(*,*),"Beca de 2,000 pesos"
+           end if
+
+           if((prom>=7.5).and.(prom<9)) then
+             print*,"Beca de 1,000 pesos"
+           end if
+
+           if((prom>=6).and.(prom<7.5)) then
+             print*,"Beca de 500 pesos"
+           end if
+
+           if(prom<6) then
+             print*," NO HAY BECA PARA TI :( "
+           end if
+        end if
+
+        if(edad<=18) then
+           if(prom>=9) then
+             print*, "Beca de 3000 pesos"
+           end if
+
+           if ((prom>=8).and.(prom<9)) then
+             print*,"Beca de 2000 pesos"
+           end if
+
+           if((prom>=6).and.(prom<8)) then
+             print*,"Su beca es de 100 pesos"
+           end if
+
+           if(prom<6) then
+             print*,"NO HAY BECA PARA TI :("
+           end if
+        end if
+
+
+        pause
+        end program Becas
